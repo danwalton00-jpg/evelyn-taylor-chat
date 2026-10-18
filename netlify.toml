@@ -1,12 +1,11 @@
 [build]
-  command = "unzip -o Evelyn-Taylor-Chat-Web-Patched.zip -d . && cd mpf_ios18 && npm install && npm run build:web"
+  command = "unzip -o \"New Evelyn-Taylor-Chat-Web-Patched.zip\" -d . && cd mpf_ios18 && npm install && npm run build:web"
   publish = "mpf_ios18/dist"
 
 [build.environment]
   NODE_VERSION = "20"
 
-[[headers]]
-  for = "/downloads/*"
-  [headers.values]
-    Content-Type = "application/zip"
-    Content-Disposition = "attachment"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
