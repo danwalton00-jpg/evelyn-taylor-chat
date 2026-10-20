@@ -1,0 +1,13 @@
+[build]
+  command = "npm install && npm run build:web"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_VERSION = "10"
+  EXPO_NO_DOCTOR = "1"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
