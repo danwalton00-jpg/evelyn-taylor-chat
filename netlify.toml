@@ -1,9 +1,11 @@
 [build]
-  command = "unzip -o \"New Evelyn-Taylor-Chat-Web-Patched.zip\" -d . && cd mpf_ios18 && npm install && npm run build:web"
-  publish = "mpf_ios18/dist"
+  command = "npm install && npm run build:web"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
+  NPM_VERSION = "10"
+  EXPO_NO_DOCTOR = "1"
 
 [[redirects]]
   from = "/*"
